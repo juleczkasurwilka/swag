@@ -31,11 +31,12 @@ fill(0);
     text(message[i], x, y);
 
   }
+    /*
 if (sliderNapis.value()<message.length){
 button.hide();
 }else{
 button.show();
-}
+}*/
 }
 
 function mouseReleased(){
