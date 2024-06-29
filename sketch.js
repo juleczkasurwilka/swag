@@ -2,7 +2,7 @@ let sliderNapis;
 let message = "COME BACK TO YOUR CHILDHOOD";
 let cellWidth;
 let cellHeight;
-
+let button;
 
 
 function setup(){
@@ -14,7 +14,12 @@ function setup(){
   sliderNapis.size(1000);
     cellWidth = width / message.length;
   cellHeight = height;
-  
+  // Create a button and place it beneath the canvas.
+   button = createButton('yes, take me back');
+  button.position(880, 700);
+
+  // Call repaint() when the button is pressed.
+  button.mousePressed(repaint);
 }
 
 function draw (){
@@ -26,10 +31,19 @@ fill(0);
     text(message[i], x, y);
 
   }
-
+if (sliderNapis.value()<message.length){
+button.hide();
+}else{
+button.show();
+}
 }
 
 function mouseReleased(){
   print('['+mouseX + ',' + mouseY+'],');
+
+}
+function repaint() {
+
+window.location.href = 'https://postupalskasasha.github.io/ankaszklanka/'
 
 }
